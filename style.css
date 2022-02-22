@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;500&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=Josefin+Sans:ital,wght@0,300;1,300;1,400&family=Libre+Franklin:ital,wght@0,100;0,400;1,200&family=Oswald:wght@200;300;400&family=Playfair+Display:ital,wght@1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300&family=Ubuntu:ital@1&display=swap');
+
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background-color: hsl(207, 33%, 95%); */
+    color: hsl(230, 29%, 20%);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+body::after{
+    background-color: hsl(207, 33%, 95%);
+    content: "";
+    position: absolute;
+    height: 60vh;
+    width: 50vw;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-bottom-left-radius: 100px;
+
+
+}
+.color{
+    content: "";
+    width: 800px;
+    height: 500px;
+    top: 0;
+    right: 0;
+    color: rgb(19, 201, 140);
+    position: absolute;
+  
+}
+img{
+    max-width: 100%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px;
+
+}
+.container >div{
+    flex: 1;
+}
+nav{
+    position: relative;
+}
+nav .container{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    
+
+}
+#logo{
+    width: 50px;
+    height: 50px;
+}
+#icon{
+    font-size: 20px;
+    display: none;
+}
+nav .container ul{
+    display: flex;
+    list-style-type: none;
+}
+nav .container ul li{
+    margin-left: 50px;
+}
+nav .container ul li a{
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    
+}
+nav .container ul li a:hover{
+    text-decoration:solid;
+}
+span{
+    background-color:hsl(230, 29%, 20%);
+    color: #fff;
+    padding: 7px;
+    border-radius: 50px;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 2px;
+}  
+small{
+    letter-spacing: 3px;
+    color: darkgrey;
+    
+}
+
+h1{
+    font-size: 3.5rem;
+}
+p{
+    font-size:20px ;
+    width: 250px;
+    margin-bottom: 50px;
+}
+.btn{
+    border: none;
+    background-color: hsl(0, 100%, 68%);
+    padding: 15px;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+}
+main{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 250px);
+    overflow: hidden;
+}
+
+.over{
+    position: relative;
+    transform: scale(1.3) translateX(25%);
+}
+.unicon{
+    position: relative;
+    color: rgb(179, 174, 174);
+    margin-left: 40px;
+}
+.unicon::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -40px;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(182, 176, 176);
+    border-radius: 50%;
+
+}
+
+@media (max-width :960px){
+    main{
+    min-height: 102vh;
+    margin-top: -100px;
+
+    }
+}
+@media (max-width : 680px){
+    main .container{
+        flex-direction: column-reverse;
+        
+    }
+    main{
+        min-height: 150vh;
+    }
+    .over{
+        transform: scale(1) translateX(0%);
+        margin-bottom: 50px;
+    }
+    .left small{
+        width: 100%;
+        
+        
+    }
+}
+
+@media(max-width:550px){
+    nav ul{
+        flex-direction: column;
+        background-color: #fff;
+        position: fixed;
+        top: 70px;
+        left: 20px;
+        z-index: 1000;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        width: calc(100% - 50px);
+        border-radius:5px ;
+        text-align: center;
+        
+    }
+    nav ul li{
+        display: none;
+        margin: 20px ;
+        text-align: center;
+    }
+    .active ul li{
+        display: block;
+    }
+    .unicon{
+        margin: 40px 0 20px;
+    }
+    .unicon::after{
+        top: 0;
+        left: 0px;
+        transform:  translate(0 , -20px);
+        height: 1px;
+        width: 100%;
+    }
+    nav a{
+        color: black;
+    }
+    #logo{
+        position: fixed;
+        left: 20px;
+        top: 45px;
+        width: 32px;
+        height: 32px;
+    }
+    #icon{
+        position: fixed;
+        top: 50px;
+        right: 30px;
+        font-size:2rem;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+    }
+    .icon-close{
+        display: none;
+    }
+    .active .icon-close{
+        display: block;
+    }
+    .active .icon-humber{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
